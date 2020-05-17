@@ -6,7 +6,7 @@ RUN apk update && \
     && cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime \
     && echo "Asia/Jakarta" > /etc/timezone
 
-WORKDIR $GOPATH/src/forkyid/service/
+WORKDIR $GOPATH/src/kevinjon27/service/
 COPY . .
 
 RUN go mod download && \

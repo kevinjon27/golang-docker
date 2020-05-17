@@ -1,4 +1,4 @@
-module github.com/forkyid/service
+module github.com/kevinjon27/service
 
 go 1.14
 

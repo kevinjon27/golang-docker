@@ -9,5 +9,5 @@ services:
     ports:
       - '80:80'
     volumes: 
-      - ./:/go/src/forkyid/service
+      - ./:/go/src/kevinjon27/service
     command: ["air", "-c", "watcher.conf"]

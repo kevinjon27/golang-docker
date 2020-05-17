@@ -8,7 +8,7 @@ RUN curl -fLo /usr/local/bin/air \
     https://raw.githubusercontent.com/cosmtrek/air/master/bin/linux/air && \
     chmod +x /usr/local/bin/air
 
-WORKDIR $GOPATH/src/forkyid/service/
+WORKDIR $GOPATH/src/kevinjon27/service/
 COPY . .
 
 EXPOSE 80
