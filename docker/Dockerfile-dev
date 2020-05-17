@@ -1,0 +1,14 @@
+FROM golang@sha256:e484434a085a28801e81089cc8bcec65bc990dd25a070e3dd6e04b19ceafaced AS builder
+
+RUN apk update && \
+    apk add --no-cache git ca-certificates tzdata bash curl && \
+    update-ca-certificates
+
+RUN curl -fLo /usr/local/bin/air \
+    https://raw.githubusercontent.com/cosmtrek/air/master/bin/linux/air && \
+    chmod +x /usr/local/bin/air
+
+WORKDIR $GOPATH/src/forkyid/service/
+COPY . .
+
+EXPOSE 80
