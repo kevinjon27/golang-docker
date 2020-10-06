@@ -4,11 +4,9 @@ RUN apk update && \
     apk add --no-cache git ca-certificates tzdata bash curl && \
     update-ca-certificates
 
-RUN curl -fLo /usr/local/bin/air \
-    https://raw.githubusercontent.com/cosmtrek/air/master/bin/linux/air && \
-    chmod +x /usr/local/bin/air
+RUN go get -u github.com/cosmtrek/air
 
-WORKDIR $GOPATH/src/kevinjon27/service/
+WORKDIR $GOPATH/src/kevinjon27/golang-docker-boilerplate/
 COPY . .
 
 EXPOSE 80
